@@ -6,19 +6,22 @@ Implementations
 
 dcm4chee
 --------
-* License: Mozilla (Open Source)
+* License: Open Source (Mozilla)
 * Status: Alpha
 * URL: https://github.com/dcm4che/dcm4chee-arc-cdi
+
+APIs supported:
 
 
 orthanc
 -------
-* License: GPLv3 (Open Source)
+* Core License: Open Source (GPLv3)
+* Plugin License: Open Source (AGPL)
 * Version:
 * Last Updated: April 10, 2015
 * Status: Alpha
-* URL: http://www.orthanc-server.com/
-* URL: https://bitbucket.org/sjodogne/orthanc-dicomweb/src/db07057d77ad00c60f030c83b9a970cf2cc62783?at=default
+* Core URL: http://www.orthanc-server.com/
+* Plugin URL: https://bitbucket.org/sjodogne/orthanc-dicomweb/src/db07057d77ad00c60f030c83b9a970cf2cc62783?at=default
 
 APIs supported:
 
