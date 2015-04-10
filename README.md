@@ -1,8 +1,8 @@
 # dicomWeb
 Information about DICOMWeb - API's, implementations, etc.  Pull requests are welcome!!
 
-Implementations
-===============
+Service Implementations
+=======================
 
 dcm4chee
 --------
@@ -43,6 +43,19 @@ APIs supported:
   * Not supported
 * STOW-RS
 
+SimpleQIDOService
+-----------------
+* License: Open Source (MIT)
+* Version: N/A
+* Last Updated: April 10, 2015
+* Status: Alpha/Prototype
+* URL :https://github.com/chafey/SimpleQIDOService
+
+APIs supported:
+
+* QIDO-RS - Studies
+* QIDO-RS - Series
+* QIDO-RS - Instances
 
 dicomsystems
 ------------
@@ -73,3 +86,13 @@ Vital Images
 * Status: Demo STOW-RS at SIIM 2014 Hackathon
 
 
+Client Implementations
+=======================
+
+cornerstoneQIDOWorklist
+-----------------------
+* License: Open Source (MIT)
+* Version: N/A
+* Last Updated: April 10, 2015
+* Status: Alpha/Prototype
+* URL: https://github.com/chafey/cornerstoneQIDORSWorklist
