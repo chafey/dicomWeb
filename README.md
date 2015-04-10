@@ -4,9 +4,9 @@ Information about DICOMWeb - API's, implementations, etc.  Pull requests are wel
 DICOM
 =====
 
-* (WG 27 meeting minutes)[http://medical.nema.org/DICOM/minutes/WG-27/]
-* (DICOM Strategy)[http://medical.nema.org/dicom/geninfo/Strategy.pdf]
-* (DICOM Standard Documents)[http://dicom.nema.org/medical/dicom/]
+* [WG 27 meeting minutes](http://medical.nema.org/DICOM/minutes/WG-27/)
+* [DICOM Strategy](http://medical.nema.org/dicom/geninfo/Strategy.pdf)
+* [DICOM Standard Documents](http://dicom.nema.org/medical/dicom/current/)
 
 Service Implementations
 =======================
