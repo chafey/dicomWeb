@@ -44,7 +44,7 @@ like to add your product to this list, email me the details.  If you would like 
 work, please provide access to a system for me to test.
 
 Value | Meaning
----------------
+------|--------
  +    | Believed to support (not verified)
  Y    | Supported (verified by Chris Hafey)
  N    | Does not support
