@@ -48,8 +48,7 @@ dcm4chee
 * URL: https://github.com/dcm4che/dcm4chee-arc-cdi
 * Note: Last official release was May 7, 2014 - trunk may have more functionality
 
-QIDO-RS
--------
+### QIDO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
@@ -69,8 +68,7 @@ dicomKeyword group element       |     ?     |
 dicomKeyword name                |     ?     |
 TimezoneOffsetFromUTC            |     ?     |
 
-WADO-RS
--------
+### WADO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
@@ -84,21 +82,12 @@ Retreive Frames                  |     ?     |
 Retrieve Bulkdata                |     ?     |
 Retrieve Metadata                |     Y     | Does not support application/json response
 
-STOW-RS
--------
+### STOW-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
 application/dicom+xml            |      ?    |
 application/json                 |      ?    |
-
-USPS-RS
--------
-
-Feature                          | Supported | Notes
----------------------------------|-----------|------------------------------
-application/dicom+xml            |      N    |
-application/json                 |      N    |
 
 orthanc
 -------
@@ -110,8 +99,7 @@ orthanc
 * Core URL: http://www.orthanc-server.com/
 * Plugin URL: https://bitbucket.org/sjodogne/orthanc-dicomweb/src/db07057d77ad00c60f030c83b9a970cf2cc62783?at=default
 
-QIDO-RS
--------
+### QIDO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
@@ -131,8 +119,7 @@ dicomKeyword group element       |     Y     |
 dicomKeyword name                |     ?     |
 TimezoneOffsetFromUTC            |     ?     |
 
-WADO-RS
--------
+### WADO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
@@ -146,21 +133,13 @@ Retreive Frames                  |     N     |
 Retrieve Bulkdata                |     N     |
 Retrieve Metadata                |     N     |
 
-STOW-RS
--------
+### STOW-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
 application/dicom+xml            |      ?    |
 application/json                 |      ?    |
 
-USPS-RS
--------
-
-Feature                          | Supported | Notes
----------------------------------|-----------|------------------------------
-application/dicom+xml            |      N    |
-application/json                 |      N    |
 
 SimpleQIDOService
 -----------------
@@ -170,8 +149,7 @@ SimpleQIDOService
 * Status: Alpha/Prototype
 * URL :https://github.com/chafey/SimpleQIDOService
 
-QIDO-RS
--------
+### QIDO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
@@ -198,8 +176,7 @@ Medical Connections
 * Status: Alpha
 * URL: http://www.medicalconnections.co.uk/DICOM_Web_Services
 
-QIDO-RS
--------
+### QIDO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
@@ -219,8 +196,7 @@ dicomKeyword group element       |     Y     |
 dicomKeyword name                |     ?     |
 TimezoneOffsetFromUTC            |     N     |
 
-WADO-RS
--------
+### WADO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
@@ -234,21 +210,12 @@ Retreive Frames                  |     N     |
 Retrieve Bulkdata                |     N     |
 Retrieve Metadata                |     N     |
 
-STOW-RS
--------
+### STOW-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
 application/dicom+xml            |      ?    |
 application/json                 |      ?    |
-
-USPS-RS
--------
-
-Feature                          | Supported | Notes
----------------------------------|-----------|------------------------------
-application/dicom+xml            |      N    |
-application/json                 |      N    |
 
 dicomsystems
 ------------
@@ -293,61 +260,3 @@ cornerstoneQIDOWorklist
 API's used:
 * QIDO-RS - Studies
 
-
-WADO-RS Scorecard
-=================
-
-The following is an attempt at establishing a conformance profile for WADO-RS service implementations.  This profile
-will more clearly communicate what parts of WADO-RS a given implementation actually supports
-
-QIDO-RS
--------
-
-Feature                          | Supported | Notes
----------------------------------|-----------|------------------------------
-application/dicom+xml            |           |
-application/json                 |           |
-Studies                          |           |
-Series                           |           |
-Instances                        |           |
-relational query                 |           |
-fuzzy matching                   |           |
-ranges                           |           |
-includefield                     |           |
-sequences                        |           |
-limit                            |           |
-offset                           |           |
-dicomKeyword group element       |           |
-dicomKeyword name                |           |
-TimezoneOffsetFromUTC            |           |
-
-WADO-RS
--------
-
-Feature                          | Supported | Notes
----------------------------------|-----------|------------------------------
-application/dicom+xml            |           |
-application/json                 |           |
-transfer-syntax                  |           |
-Retrieve Study                   |           |
-Retrieve Series                  |           |
-Retrieve Instance                |           |
-Retreive Frames                  |           |
-Retrieve Bulkdata                |           |
-Retrieve Metadata                |           |
-
-STOW-RS
--------
-
-Feature                          | Supported | Notes
----------------------------------|-----------|------------------------------
-application/dicom+xml            |           |
-application/json                 |           |
-
-USPS-RS
--------
-
-Feature                          | Supported | Notes
----------------------------------|-----------|------------------------------
-application/dicom+xml            |           |
-application/json                 |           |
