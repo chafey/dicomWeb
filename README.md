@@ -48,27 +48,57 @@ dcm4chee
 * URL: https://github.com/dcm4che/dcm4chee-arc-cdi
 * Note: Last official release was May 7, 2014 - trunk may have more functionality
 
-APIs supported:
-* QIDO-RS - Studies
-  * Not standards compliant - returns fields by name, not group/element
-* QIDO-RS - Series
-  * ?
-* QIDO-RS - Instances
-  * ?
-* WADO-RS - Retrieve Study
-  * Does not support application/json
-* WADO-RS - Retrieve Series
-  * ?
-* WADO-RS - Retrieve Instance
-  * ?
-* WADO-RS - Retrieve Frames
-  * ?
-* WADO-RS - Retrieve Bulkdata
-  * ?
-* WADO-RS - Retrieve Metadata
-  * Not supported
-* STOW-RS
-  * ?
+QIDO-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |     Y     |
+application/json                 |     Y     |
+Studies                          |     Y     | Returns names not group element
+Series                           |     Y     |
+Instances                        |     Y     |
+relational query                 |     ?     |
+fuzzy matching                   |     ?     |
+ranges                           |     ?     |
+includefield                     |     ?     |
+sequences                        |     ?     |
+limit                            |     ?     |
+offset                           |     ?     |
+dicomKeyword group element       |     ?     |
+dicomKeyword name                |     ?     |
+TimezoneOffsetFromUTC            |     ?     |
+
+WADO-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |     ?     |
+application/json                 |     ?     |
+transfer-syntax                  |     ?     |
+Retrieve Study                   |     ?     |
+Retrieve Series                  |     ?     |
+Retrieve Instance                |     ?     |
+Retreive Frames                  |     ?     |
+Retrieve Bulkdata                |     ?     |
+Retrieve Metadata                |     Y     | Does not support application/json response
+
+STOW-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |      ?    |
+application/json                 |      ?    |
+
+USPS-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |      N    |
+application/json                 |      N    |
 
 orthanc
 -------
@@ -80,27 +110,57 @@ orthanc
 * Core URL: http://www.orthanc-server.com/
 * Plugin URL: https://bitbucket.org/sjodogne/orthanc-dicomweb/src/db07057d77ad00c60f030c83b9a970cf2cc62783?at=default
 
-APIs supported:
+QIDO-RS
+-------
 
-* QIDO-RS - Studies
-  * Does not support relational queries
-  * Does not support fuzzy matching
-* QIDO-RS - Series
-* QIDO-RS - Instances
-* WADO-RS - Retrieve Study
-  * Does not support transfer syntaxes
-  * Does not support application/json
-* WADO-RS - Retrieve Series
-  * Does not support transfer syntaxes
-* WADO-RS - Retrieve Instance
-  * Does not support transfer syntaxes
-* WADO-RS - Retrieve Frames
-  * Not supported
-* WADO-RS - Retrieve Bulkdata
-  * Not supported
-* WADO-RS - Retrieve Metadata
-  * Not supported
-* STOW-RS
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |     Y     |
+application/json                 |     Y     |
+Studies                          |     Y     |
+Series                           |     Y     |
+Instances                        |     Y     |
+relational query                 |     N     |
+fuzzy matching                   |     N     |
+ranges                           |     Y     |
+includefield                     |     Y     |
+sequences                        |     ?     |
+limit                            |     Y     |
+offset                           |     Y     |
+dicomKeyword group element       |     Y     |
+dicomKeyword name                |     ?     |
+TimezoneOffsetFromUTC            |     ?     |
+
+WADO-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |     ?     |
+application/json                 |     ?     |
+transfer-syntax                  |     N     |
+Retrieve Study                   |     Y     |
+Retrieve Series                  |     Y     |
+Retrieve Instance                |     Y     |
+Retreive Frames                  |     N     |
+Retrieve Bulkdata                |     N     |
+Retrieve Metadata                |     N     |
+
+STOW-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |      ?    |
+application/json                 |      ?    |
+
+USPS-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |      N    |
+application/json                 |      N    |
 
 SimpleQIDOService
 -----------------
@@ -110,19 +170,26 @@ SimpleQIDOService
 * Status: Alpha/Prototype
 * URL :https://github.com/chafey/SimpleQIDOService
 
-APIs supported:
+QIDO-RS
+-------
 
-* QIDO-RS - Studies
-  * Does not support relational queries
-  * Does not support application/dicom+xml response
-  * Does not support fuzzy matching
-  * Does not support includefield=all
-  * Limited support for wildcard matching
-  * Does not support sequence elements
-* QIDO-RS - Series
-  * Limited support for wildcard matching
-* QIDO-RS - Instances
-  * Limited support for wildcard matching
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |     N     |
+application/json                 |     Y     |
+Studies                          |     Y     |
+Series                           |     Y     |
+Instances                        |     Y     |
+relational query                 |     N     |
+fuzzy matching                   |     N     |
+ranges                           |     Y     | * limited to specific fields
+includefield                     |     N     |
+sequences                        |     N     |
+limit                            |     Y     |
+offset                           |     Y     |
+dicomKeyword group element       |     Y     |
+dicomKeyword name                |     N     |
+TimezoneOffsetFromUTC            |     N     |
 
 Medical Connections
 -------------------
@@ -131,24 +198,57 @@ Medical Connections
 * Status: Alpha
 * URL: http://www.medicalconnections.co.uk/DICOM_Web_Services
 
-API's Supported:
-* QIDO-RS - Studies
-  * Does not support TimezoneOffsetFromUTC
-  * Does not support fuzzy matching
-* QIDO-RS - Series
-* QIDO-RS - Instances
-* WADO-RS - Retrieve Study
-  * Does not support transfer syntaxes
-* WADO-RS - Retrieve Series
-  * Does not support transfer syntaxes
-* WADO-RS - Retrieve Instance
-  * Does not support transfer syntaxes
-* WADO-RS - Retrieve Frames
-  * Not implemented
-* WADO-RS - Retrieve Bulkdata
-* WADO-RS - Retrieve Metadata
-* STOW-RS
-  * Does not support transfer syntaxes
+QIDO-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |     Y     |
+application/json                 |     Y     |
+Studies                          |     Y     |
+Series                           |     Y     |
+Instances                        |     Y     |
+relational query                 |     ?     |
+fuzzy matching                   |     N     |
+ranges                           |     Y     |
+includefield                     |     Y     |
+sequences                        |     ?     |
+limit                            |     Y     |
+offset                           |     Y     |
+dicomKeyword group element       |     Y     |
+dicomKeyword name                |     ?     |
+TimezoneOffsetFromUTC            |     N     |
+
+WADO-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |     ?     |
+application/json                 |     ?     |
+transfer-syntax                  |     N     |
+Retrieve Study                   |     Y     |
+Retrieve Series                  |     Y     |
+Retrieve Instance                |     Y     |
+Retreive Frames                  |     N     |
+Retrieve Bulkdata                |     N     |
+Retrieve Metadata                |     N     |
+
+STOW-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |      ?    |
+application/json                 |      ?    |
+
+USPS-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |      N    |
+application/json                 |      N    |
 
 dicomsystems
 ------------
@@ -192,3 +292,62 @@ cornerstoneQIDOWorklist
 
 API's used:
 * QIDO-RS - Studies
+
+
+WADO-RS Scorecard
+=================
+
+The following is an attempt at establishing a conformance profile for WADO-RS service implementations.  This profile
+will more clearly communicate what parts of WADO-RS a given implementation actually supports
+
+QIDO-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |           |
+application/json                 |           |
+Studies                          |           |
+Series                           |           |
+Instances                        |           |
+relational query                 |           |
+fuzzy matching                   |           |
+ranges                           |           |
+includefield                     |           |
+sequences                        |           |
+limit                            |           |
+offset                           |           |
+dicomKeyword group element       |           |
+dicomKeyword name                |           |
+TimezoneOffsetFromUTC            |           |
+
+WADO-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |           |
+application/json                 |           |
+transfer-syntax                  |           |
+Retrieve Study                   |           |
+Retrieve Series                  |           |
+Retrieve Instance                |           |
+Retreive Frames                  |           |
+Retrieve Bulkdata                |           |
+Retrieve Metadata                |           |
+
+STOW-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |           |
+application/json                 |           |
+
+USPS-RS
+-------
+
+Feature                          | Supported | Notes
+---------------------------------|-----------|------------------------------
+application/dicom+xml            |           |
+application/json                 |           |
