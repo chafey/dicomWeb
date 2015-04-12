@@ -40,13 +40,13 @@ Service Implementations
 =======================
 
 The following is a list of implementations that support DICOMWeb with detailed lists of functionality.  If you would
-like to add your product to this list, email me the details.  If you would like me to verify that specific features
-work, please provide access to a system for me to test.
+like to add your product to this list, please submit a pull request or email me (chafey@gmail.com) the details
+ using the documentation for one of the products below as a guideline.
 
 Value | Meaning
 ------|--------
- +    | Believed to support (not verified)
- Y    | Supported (verified by Chris Hafey)
+ Y    | Vendor claims it is supported
+ +    | Verified to work by third party
  N    | Does not support
  ?    | Unknown support
 
@@ -58,40 +58,41 @@ dcm4chee
 * Status: Alpha
 * URL: https://github.com/dcm4che/dcm4chee-arc-cdi
 * Note: Last official release was May 7, 2014 - trunk may have more functionality
+* Third party verifier: Chris Hafey
 
 ### QIDO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
-application/dicom+xml            |     +     |
-application/json                 |     +     |
+application/dicom+xml            |     Y     |
+application/json                 |     Y     |
 Studies                          |     +     | Returns names not group element
-Series                           |     +     |
-Instances                        |     +     |
+Series                           |     Y     |
+Instances                        |     Y     |
 relational query                 |     ?     |
 fuzzy matching                   |     ?     |
-ranges                           |     +     |
+ranges                           |     Y     |
 includefield                     |     ?     |
 sequences                        |     ?     |
-limit                            |     +     |
-offset                           |     +     |
+limit                            |     Y     |
+offset                           |     Y     |
 dicomKeyword group element       |     ?     |
 dicomKeyword name                |     ?     |
-TimezoneOffsetFromUTC            |     +     |
+TimezoneOffsetFromUTC            |     Y     |
 
 ### WADO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
-application/dicom+xml            |     +     |
-application/json                 |     +     |
+application/dicom+xml            |     Y     |
+application/json                 |     Y     |
 transfer-syntax                  |     ?     |
-Retrieve Study                   |     +     |
-Retrieve Series                  |     +     |
-Retrieve Instance                |     +     |
+Retrieve Study                   |     Y     |
+Retrieve Series                  |     Y     |
+Retrieve Instance                |     Y     |
 Retreive Frames                  |     ?     |
 Retrieve Bulkdata                |     ?     |
-Retrieve Metadata                |     +     | Does not support application/json response
+Retrieve Metadata                |     Y     | Does not support application/json response
 
 ### STOW-RS
 
@@ -114,19 +115,19 @@ orthanc
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
-application/dicom+xml            |     +     |
-application/json                 |     +     |
-Studies                          |     +     |
-Series                           |     +     |
-Instances                        |     +     |
+application/dicom+xml            |     Y     |
+application/json                 |     Y     |
+Studies                          |     Y     |
+Series                           |     Y     |
+Instances                        |     Y     |
 relational query                 |     N     |
 fuzzy matching                   |     N     |
-ranges                           |     +     |
-includefield                     |     +     |
-sequences                        |     +     |
-limit                            |     +     |
-offset                           |     +     |
-dicomKeyword group element       |     +     |
+ranges                           |     Y     |
+includefield                     |     Y     |
+sequences                        |     Y     |
+limit                            |     Y     |
+offset                           |     Y     |
+dicomKeyword group element       |     Y     |
 dicomKeyword name                |     ?     |
 TimezoneOffsetFromUTC            |     ?     |
 
@@ -137,9 +138,9 @@ Feature                          | Supported | Notes
 application/dicom+xml            |     ?     |
 application/json                 |     ?     |
 transfer-syntax                  |     N     |
-Retrieve Study                   |     +     |
-Retrieve Series                  |     +     |
-Retrieve Instance                |     +     |
+Retrieve Study                   |     Y     |
+Retrieve Series                  |     Y     |
+Retrieve Instance                |     Y     |
 Retreive Frames                  |     N     |
 Retrieve Bulkdata                |     N     |
 Retrieve Metadata                |     N     |
@@ -191,19 +192,19 @@ Medical Connections
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
-application/dicom+xml            |     +     |
-application/json                 |     +     |
-Studies                          |     +     |
-Series                           |     +     |
-Instances                        |     +     |
+application/dicom+xml            |     Y     |
+application/json                 |     Y     |
+Studies                          |     Y     |
+Series                           |     Y     |
+Instances                        |     Y     |
 relational query                 |     ?     |
 fuzzy matching                   |     N     |
-ranges                           |     +     |
-includefield                     |     +     |
+ranges                           |     Y     |
+includefield                     |     Y     |
 sequences                        |     ?     |
-limit                            |     +     |
-offset                           |     +     |
-dicomKeyword group element       |     +     |
+limit                            |     Y     |
+offset                           |     Y     |
+dicomKeyword group element       |     Y     |
 dicomKeyword name                |     ?     |
 TimezoneOffsetFromUTC            |     N     |
 
@@ -214,9 +215,9 @@ Feature                          | Supported | Notes
 application/dicom+xml            |     ?     |
 application/json                 |     ?     |
 transfer-syntax                  |     N     |
-Retrieve Study                   |     +     |
-Retrieve Series                  |     +     |
-Retrieve Instance                |     +     |
+Retrieve Study                   |     Y     |
+Retrieve Series                  |     Y     |
+Retrieve Instance                |     Y     |
 Retreive Frames                  |     N     |
 Retrieve Bulkdata                |     N     |
 Retrieve Metadata                |     N     |
