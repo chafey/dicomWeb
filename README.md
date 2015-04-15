@@ -110,24 +110,26 @@ orthanc
 * Status: Alpha
 * Core URL: http://www.orthanc-server.com/
 * Plugin URL: https://bitbucket.org/sjodogne/orthanc-dicomweb/src/db07057d77ad00c60f030c83b9a970cf2cc62783?at=default
+* Third party verifier: Chris Hafey
+* NOTE: You can have orthanc running in a VM in minutes using [orthanc-vagrant](https://github.com/chafey/orthanc-vagrant)
 
 ### QIDO-RS
 
 Feature                          | Supported | Notes
 ---------------------------------|-----------|------------------------------
 application/dicom+xml            |     Y     |
-application/json                 |     Y     |
-Studies                          |     Y     |
+application/json                 |     +     |
+Studies                          |     +     |
 Series                           |     Y     |
-Instances                        |     Y     |
+Instances                        |     +     |
 relational query                 |     N     |
 fuzzy matching                   |     N     |
-ranges                           |     Y     |
+ranges                           |     +     |
 includefield                     |     Y     |
 sequences                        |     Y     |
 limit                            |     Y     |
 offset                           |     Y     |
-dicomKeyword group element       |     Y     |
+dicomKeyword group element       |     +     |
 dicomKeyword name                |     ?     |
 TimezoneOffsetFromUTC            |     ?     |
 
@@ -268,6 +270,7 @@ cornerstoneQIDOWorklist
 * Last Updated: April 10, 2015
 * Status: Alpha/Prototype
 * URL: https://github.com/chafey/cornerstoneQIDORSWorklist
+* NOTE: Works out of the box with [orthanc-vagrant](https://github.com/chafey/orthanc-vagrant)
 
 API's used:
 * QIDO-RS - Studies
